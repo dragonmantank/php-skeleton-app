@@ -1,4 +1,4 @@
-# Nexmo Ruby Skeleton Application
+# Nexmo PHP Skeleton Application
 
 This is a basic Slim 4 PHP application to test and debug your Nexmo credentials and environment. Utilize this application to test that your API credentials are in working order and to examine the event webhook data you receive when API requests are received by Nexmo from your account.
 
