@@ -79,10 +79,10 @@ $app->post('/', function (Request $request, Response $response) {
     return new RedirectResponse('/');
 });
 
-$app->get('/webhooks/event', function (Request $request, Response $response) {
+$app->map(['GET','POST'], '/webhooks/event', function (Request $request, Response $response) {
     $params = $request->getParsedBody();
 
-    if (!count($params)) {
+    if (!$params || !count($params)) {
         $params = $request->getQueryParams();
     }
 
