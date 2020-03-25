@@ -21,7 +21,8 @@
         "php-di/php-di": "^6.0",
         "nexmo/client": "^2.0",
         "slim/flash": "^0.4.0",
-        "kanellov/slim-twig-flash": "^0.2.0"
+        "kanellov/slim-twig-flash": "^0.2.0",
+        "twig/extensions": "^1.5.0"
     },
     "autoload": {
         "psr-4":{
