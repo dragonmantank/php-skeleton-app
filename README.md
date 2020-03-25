@@ -105,4 +105,4 @@ We ❤️ contributions from everyone! [Bug reports](https://github.com/Nexmo/ph
 
 ## License
 
-This project is under the [MIT License](LICENSE)
+This projet is under the [MIT License](LICENSE.md)
