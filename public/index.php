@@ -1,15 +1,15 @@
 <?php
 
 use DI\Container;
-use Nexmo\Client;
+use Vonage\Client;
 use Dotenv\Dotenv;
 use Slim\Views\Twig;
 use Slim\Flash\Messages;
 use Slim\Factory\AppFactory;
 use Slim\Views\TwigMiddleware;
 use Knlv\Slim\Views\TwigMessages;
-use Nexmo\Client\Credentials\Basic;
-use NexmoPHPSkeleton\Middleware\Session;
+use Vonage\Client\Credentials\Basic;
+use VonagePHPSkeleton\Middleware\Session;
 use Zend\Diactoros\Response\RedirectResponse;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -45,8 +45,8 @@ $app->get('/', function (Request $request, Response $response) {
 });
 
 $app->post('/', function (Request $request, Response $response) {
-    $nexmo = new Client(
-        new Basic(getenv('NEXMO_API_KEY'), getenv('NEXMO_API_SECRET')),
+    $vonage = new Client(
+        new Basic(getenv('VONAGE_API_KEY'), getenv('VONAGE_API_SECRET')),
         ['app' => ['name' => 'php-skeleton-app', 'version' => '1.0.0']]
     );
     $body = $request->getParsedBody();
@@ -56,7 +56,7 @@ $app->post('/', function (Request $request, Response $response) {
     }
 
     if (!array_key_exists('from', $body)) {
-        $this->get('flash')->addMessage('error', 'You must supply a number to send from, and it must be a Nexmo number');
+        $this->get('flash')->addMessage('error', 'You must supply a number to send from, and it must be a Vonage number');
     }
 
     if (!array_key_exists('text', $body)) {
@@ -65,7 +65,7 @@ $app->post('/', function (Request $request, Response $response) {
 
     if (empty($this->get('flash')->getMessages())) {
         try {
-            $sms = $nexmo->message()->send([
+            $sms = $vonage->message()->send([
                 'to' => $body['to'],
                 'from' => $body['from'],
                 'text' => $body['text'],

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace NexmoPHPSkeleton\Middleware;
+namespace VonagePHPSkeleton\Middleware;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Server\MiddlewareInterface;

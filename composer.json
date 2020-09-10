@@ -1,7 +1,7 @@
 {
-  "name": "nexmo/php-skeleton-app",
+  "name": "vonage/php-skeleton-app",
   "description": "Sample PHP Application to test environment setup",
-  "license": "MIT",
+  "license": "Apache 2.0",
   "type": "project",
   "authors": [
     {
@@ -11,7 +11,7 @@
     }
   ],
   "support": {
-    "email": "devrel@nexmo.com"
+    "email": "devrel@vonage.com"
   },
     "require": {
         "slim/slim": "4.*",
@@ -19,14 +19,14 @@
         "vlucas/phpdotenv": "^4.1",
         "slim/twig-view": "^3.0",
         "php-di/php-di": "^6.0",
-        "nexmo/client": "^2.0",
+        "vonage/client": "^2.3",
         "slim/flash": "^0.4.0",
         "kanellov/slim-twig-flash": "^0.2.0",
         "twig/extensions": "^1.5.0"
     },
     "autoload": {
         "psr-4":{
-            "NexmoPHPSkeleton\\": "src/"
+            "VonagePHPSkeleton\\": "src/"
         }
     },
     "scripts":{
