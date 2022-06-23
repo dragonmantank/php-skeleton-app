@@ -1,3 +1,6 @@
+This software uses the slim-twig-flash Library.
+
+The slim-twig-flash Library is licensed under the GNU General Public License, version 3.0. You can find a copy of this license at [https://www.gnu.org/licenses/lgpl-2.1.en.html](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
                                  Apache License
                            Version 2.0, January 2004
