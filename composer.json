@@ -1,7 +1,6 @@
 {
   "name": "vonage/php-skeleton-app",
   "description": "Sample PHP Application to test environment setup",
-  "license": "Apache 2.0",
   "type": "project",
   "authors": [
     {
