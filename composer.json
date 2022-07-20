@@ -1,8 +1,8 @@
 {
   "name": "vonage/php-skeleton-app",
   "description": "Sample PHP Application to test environment setup",
-  "license": "Apache 2.0",
   "type": "project",
+  "license": "Apache-2.0",
   "authors": [
     {
       "name": "Chris Tankersley",
@@ -21,8 +21,8 @@
         "php-di/php-di": "^6.0",
         "vonage/client": "^2.3",
         "slim/flash": "^0.4.0",
-        "kanellov/slim-twig-flash": "^0.2.0",
-        "twig/extensions": "^1.5.0"
+        "twig/extensions": "^1.5.0",
+    "laminas/laminas-diactoros": "^2.11"
     },
     "autoload": {
         "psr-4":{

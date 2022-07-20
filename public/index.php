@@ -7,10 +7,9 @@ use Slim\Views\Twig;
 use Slim\Flash\Messages;
 use Slim\Factory\AppFactory;
 use Slim\Views\TwigMiddleware;
-use Knlv\Slim\Views\TwigMessages;
 use Vonage\Client\Credentials\Basic;
 use VonagePHPSkeleton\Middleware\Session;
-use Zend\Diactoros\Response\RedirectResponse;
+use Laminas\Diactoros\Response\RedirectResponse;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
@@ -26,9 +25,10 @@ $container->set('flash', function() {
 });
 $container->set('view', function() use ($container) {
     $twig = Twig::create(__DIR__ . '/../views');
-    $twig->addExtension(new TwigMessages($container->get('flash')));
     return $twig;
 });
+$environment = $container->get('view')->getEnvironment();
+$environment->addGlobal('flash', $container->get('flash'));
 AppFactory::setContainer($container);
 
 // Instantiate App
