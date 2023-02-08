@@ -15,14 +15,13 @@
   },
     "require": {
         "slim/slim": "4.*",
-        "slim/psr7": "^0.6.0",
+        "slim/psr7": "^1.0",
         "vlucas/phpdotenv": "^4.1",
-        "slim/twig-view": "^3.0",
+        "slim/twig-view": "^3.3",
         "php-di/php-di": "^6.0",
-        "vonage/client": "^2.3",
+        "vonage/client": "^4.0",
         "slim/flash": "^0.4.0",
-        "twig/extensions": "^1.5.0",
-    "laminas/laminas-diactoros": "^2.11"
+        "laminas/laminas-diactoros": "^2.11"
     },
     "autoload": {
         "psr-4":{
